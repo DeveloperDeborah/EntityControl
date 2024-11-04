@@ -8,15 +8,20 @@ import no.runsafe.entitycontrol.shulker.AzurenShulker;
 import no.runsafe.entitycontrol.slime.SlimeAnywhere;
 import no.runsafe.framework.RunsafeConfigurablePlugin;
 import no.runsafe.framework.api.command.Command;
+import no.runsafe.framework.api.log.IDebug;
 import no.runsafe.framework.features.Commands;
 import no.runsafe.framework.features.Database;
 import no.runsafe.framework.features.Events;
 
 public class Plugin extends RunsafeConfigurablePlugin
 {
+	public static IDebug Debugger;
+
 	@Override
 	protected void pluginSetup()
 	{
+		Debugger = getComponent(IDebug.class);
+
 		addComponent(Commands.class);
 		addComponent(Events.class);
 		addComponent(Database.class);
