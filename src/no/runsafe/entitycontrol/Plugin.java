@@ -21,7 +21,7 @@ public class Plugin extends RunsafeConfigurablePlugin
 		addComponent(Events.class);
 		addComponent(Database.class);
 
-		this.addComponent(Options.class);
+		this.addComponent(Config.class);
 		this.addComponent(EntityPortalCreation.class);
 		this.addComponent(EntityDeath.class);
 

@@ -9,16 +9,15 @@ import no.runsafe.framework.minecraft.event.entity.RunsafeEntityDeathEvent;
 
 public class EntityDeath implements IEntityDeathEvent
 {
-	public EntityDeath(Options options)
+	public EntityDeath()
 	{
-		this.options = options;
 	}
 
 	@Override
 	public void OnEntityDeath(RunsafeEntityDeathEvent event)
 	{
 		RunsafeEntity entity = event.getEntity();
-		if (entity.getEntityType() == LivingEntity.EnderDragon && this.options.enderDragonDropsEgg())
+		if (entity.getEntityType() == LivingEntity.EnderDragon && Config.enderDragonDropsEgg)
 		{
 			ILocation location = entity.getLocation();
 			if (location != null)
@@ -27,6 +26,4 @@ public class EntityDeath implements IEntityDeathEvent
 			}
 		}
 	}
-
-	private final Options options;
 }

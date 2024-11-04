@@ -6,17 +6,14 @@ import no.runsafe.framework.minecraft.event.entity.RunsafeEntityCreatePortalEven
 
 public class EntityPortalCreation implements IEntityCreatePortalEvent
 {
-	public EntityPortalCreation(Options options)
+	public EntityPortalCreation()
 	{
-		this.options = options;
 	}
 
 	@Override
 	public void OnEntityCreatePortal(RunsafeEntityCreatePortalEvent event)
 	{
-		if (event.getEntity().getEntityType() == LivingEntity.EnderDragon && this.options.disableEnderPortalCreation())
+		if (event.getEntity().getEntityType() == LivingEntity.EnderDragon && Config.disableEnderPortalCreation)
 			event.cancel();
 	}
-
-	private final Options options;
 }
