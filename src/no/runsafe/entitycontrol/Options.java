@@ -15,13 +15,20 @@ public class Options implements IConfigurationChanged
 		return this.enderDragonDropsEgg;
 	}
 
+	public String getAzurenWorldName()
+	{
+		return this.azurenWorldName;
+	}
+
 	@Override
 	public void OnConfigurationChanged(IConfiguration configuration)
 	{
 		this.disableEnderPortalCreation = configuration.getConfigValueAsBoolean("disableEnderPortalCreation");
 		this.enderDragonDropsEgg = configuration.getConfigValueAsBoolean("enderDragonDropsEgg");
+		this.azurenWorldName = configuration.getConfigValueAsString("azurenWorldName");
 	}
 
 	private boolean disableEnderPortalCreation;
 	private boolean enderDragonDropsEgg;
+	private String azurenWorldName;
 }

@@ -1,5 +1,6 @@
 disableEnderPortalCreation: true
 enderDragonDropsEgg: true
+azurenWorldName: azuren
 preventNaturalSpawning:
     - spawn
 preventSpawning:
