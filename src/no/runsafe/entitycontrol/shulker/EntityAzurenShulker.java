@@ -1,8 +1,8 @@
 package no.runsafe.entitycontrol.shulker;
 
-import net.minecraft.server.v1_12_R1.EntityShulker;
-import net.minecraft.server.v1_12_R1.EnumDifficulty;
-import net.minecraft.server.v1_12_R1.World;
+import net.minecraft.server.v1_12_R1.*;
+import no.runsafe.entitycontrol.Config;
+import no.runsafe.framework.tools.reflection.ReflectionHelper;
 
 public class EntityAzurenShulker extends EntityShulker
 {
@@ -10,16 +10,21 @@ public class EntityAzurenShulker extends EntityShulker
 	{
 		super(world);
 		//by -> shulker colour
-		//by = EnumColor.BLACK; // TODO: reflection
-
-		// TODO : disable persistence
+		ReflectionHelper.setField(this, "by", EnumColor.BLACK);
+		this.persistent = false;
 	}
 
 	@Override
 	public boolean canSpawn()
 	{
 		return world.getDifficulty() != EnumDifficulty.PEACEFUL
+			&& world.getWorldData().getName().equals(Config.azurenWorldName)
 			&& random.nextInt(100) == 0;
-			// TODO check world
+	}
+
+	@Override
+	protected void dropDeathLoot(boolean flag, int i)
+	{
+		a(Items.COOKIE, 3);
 	}
 }
