@@ -6,6 +6,7 @@ import no.runsafe.entitycontrol.pets.commands.CreateEgg;
 import no.runsafe.entitycontrol.pets.commands.SpawnCompanion;
 import no.runsafe.entitycontrol.shulker.AzurenShulker;
 import no.runsafe.entitycontrol.slime.SlimeAnywhere;
+import no.runsafe.entitycontrol.witherBoss.WitherOverwrite;
 import no.runsafe.framework.RunsafeConfigurablePlugin;
 import no.runsafe.framework.api.command.Command;
 import no.runsafe.framework.api.log.IDebug;
@@ -43,6 +44,7 @@ public class Plugin extends RunsafeConfigurablePlugin
 
 		addComponent(AzurenShulker.class);
 		addComponent(SlimeAnywhere.class);
+		addComponent(WitherOverwrite.class);
 
 		addComponent(SpawnBlocker.class);
 	}
