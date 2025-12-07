@@ -14,6 +14,7 @@ public class RunsafeWitherBoss extends EntityWither
 	@Override
 	protected void r()
 	{
+		/*
 		this.goalSelector.a(0, (dm() > 0));
 		this.goalSelector.a(2, new PathfinderGoalArrowAttack(this, 1.0F, 40, 20.0F));
 		this.goalSelector.a(5, new PathfinderGoalRandomStrollLand(this, 1.0F));
@@ -24,5 +25,6 @@ public class RunsafeWitherBoss extends EntityWither
 			2, new PathfinderGoalNearestAttackableTarget(this, EntityInsentient.class, 0, false, false,
 			(Predicate) ReflectionHelper.getObjectField(this, "bH"))
 		);
+		*/
 	}
 }
