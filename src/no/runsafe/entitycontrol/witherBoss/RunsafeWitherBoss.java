@@ -27,4 +27,14 @@ public class RunsafeWitherBoss extends EntityWither
 		);
 		*/
 	}
+
+	@Override
+	public void n()
+	{
+	}
+
+	@Override
+	public void M()
+	{
+	}
 }
