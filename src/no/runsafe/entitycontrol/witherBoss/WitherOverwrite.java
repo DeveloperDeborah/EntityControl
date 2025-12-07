@@ -8,6 +8,6 @@ public class WitherOverwrite implements IServerReady
 	@Override
 	public void OnServerReady()
 	{
-		EntityRegister.registerOverrideEntity(RunsafeWitherBoss.class, "wither", 64);
+		EntityRegister.registerOverrideEntity(RunsafeWitherBoss.class, "Slime", 64);
 	}
 }
